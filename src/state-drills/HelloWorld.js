@@ -10,7 +10,7 @@ class HelloWorld extends Component {
       return (
         <div className="HelloWorld">
         <hr/>
-          <p>Hello, {this.state.cool}</p>
+          <p>Hello {this.state.cool}</p>
           <button
           onClick={() => this.setState({cool:'Chase'})}
           >Cool

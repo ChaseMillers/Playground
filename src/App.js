@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
 import './App.css';
 import Messages from './messages.js';
-import HelloWorld from './state-drills/HelloWorld.js'
-import Bomb from './state-drills/Bomb.js'
+import HelloWorld from './state-drills/HelloWorld.js';
+import Bomb from './state-drills/Bomb.js';
+import Gun from './state-drills/RouletteGun.js';
+import Tabs from './state/Tabs.js';
+
+const tabsProp = [
+  { name: '1st tab',
+    content: <p>People</p> },
+  { name: '2nd tab',
+    content: <p>Order</p> },
+  { name: '3rd tab',
+    content: <p>Our</p> },
+  { name: '4th tab',
+    content: <p>Potatoes</p> }
+];
+
 class App extends Component {
   render() {
     return (
@@ -14,6 +28,8 @@ class App extends Component {
       </div>
       <HelloWorld/>
       <Bomb/>
+      <Gun/>
+      <Tabs tabs={tabsProp}/>
       </div>
     );
   }

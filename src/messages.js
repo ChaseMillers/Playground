@@ -2,7 +2,7 @@ import React from 'react';
 import './messages.css';
 
 export default function Messages(props) {
-  const badge = +props.unread 
+  const badge = props.unread 
     ? <div className="unread_count badge">{props.unread}</div>
     : null;
   return (

@@ -15,20 +15,31 @@ export default class Bomb extends Component {
         }, 1000)
       }
     
+      /*this is so if we leave the page, 
+      the component wont keep counting*/
       componentWillUnmount() {
         clearInterval(this.interval)
       }
+
+      renderDisplay(){
+      const { start } = this.state
+      if (start >= 8) {
+        clearInterval(this.interval)
+        return 'BOOM!!!!'
+      } else if (start % 2 === 0) {
+        return 'tick'
+      } else {
+        return 'tock'
+      }
+    }
 
     render() {
       return (
         <div className="Bomb">
         <hr/>
-          <p>tick, tock, BOOM! {this.state.start}</p>
+          <p> {this.renderDisplay()} {this.state.start}</p>
         <hr/>
         </div>
       )}
       
-      componentWillUnmount() {
-        clearInterval(this.interval)     
-        }
     }
