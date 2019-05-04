@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tabs Component closes the first tab and opens any clicked tab 1`] = `
+<div>
+  <button
+    key="0"
+    onClick={[Function]}
+  >
+    1st tab
+  </button>
+  <button
+    key="1"
+    onClick={[Function]}
+  >
+    2nd tab
+  </button>
+  <button
+    key="2"
+    onClick={[Function]}
+  >
+    3rd tab
+  </button>
+  <button
+    key="3"
+    onClick={[Function]}
+  >
+    4th tab
+  </button>
+  <div
+    className="content"
+  >
+    <p>
+      Order
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Tabs Component renders empty given no tabs 1`] = `<div />`;
+
 exports[`Tabs Component renders the first tab by default 1`] = `
 <div>
   <hr />

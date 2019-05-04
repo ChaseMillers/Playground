@@ -2,11 +2,11 @@ import React from "react";
 
 
 export default class Tabs extends React.Component {
-    static defaultProps = { tabs: [] };
+  static defaultProps = { tabs: [] };
 
-state = {
+  state = {
     currentTabIndex: 0
-};
+  };
 
   renderButtons() {
     return this.props.tabs.map((tab, index)=>(
@@ -17,6 +17,7 @@ state = {
   }
 
   handleButtonClick(index) {
+    
     this.setState({currentTabIndex: index})
 }
 
@@ -32,7 +33,7 @@ state = {
         return (
             <div>
                 {this.renderButtons()}
-                {this.props.tabs.length && this.renderContent()}
+                {!!this.props.tabs.length && this.renderContent()}
             </div>
         )
     } 

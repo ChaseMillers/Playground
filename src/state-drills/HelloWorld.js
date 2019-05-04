@@ -9,7 +9,7 @@ class HelloWorld extends Component {
     render() {
       return (
         <div className="HelloWorld">
-        <hr/>
+
           <p>Hello {this.state.cool}</p>
           <button
           onClick={() => this.setState({cool:'Chase'})}
@@ -25,7 +25,7 @@ class HelloWorld extends Component {
           onClick={() => this.setState({cool:'Sofia'})}
           >Sexy
           </button>
-          <hr/>
+          
         </div>
       );
       

@@ -43,12 +43,10 @@ export default class RouletteGun extends Component {
   render() {
     return (
       <div className='RouletteGun'>
-      <hr/>
         <p>{this.renderDisplay()}</p>
         <button onClick={this.handleClick}>
           Pull the trigger!
         </button>
-        <hr/>
       </div>
     )
   }

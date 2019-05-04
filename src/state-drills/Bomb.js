@@ -36,9 +36,7 @@ export default class Bomb extends Component {
     render() {
       return (
         <div className="Bomb">
-        <hr/>
           <p> {this.renderDisplay()} {this.state.start}</p>
-        <hr/>
         </div>
       )}
       

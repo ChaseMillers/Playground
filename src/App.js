@@ -5,6 +5,7 @@ import HelloWorld from './state-drills/HelloWorld.js';
 import Bomb from './state-drills/Bomb.js';
 import Gun from './state-drills/RouletteGun.js';
 import Tabs from './state/Tabs.js';
+import Accordion from './state-drills/Accordion.js';
 
 const tabsProp = [
   { name: '1st tab',
@@ -17,6 +18,21 @@ const tabsProp = [
     content: <p>Potatoes</p> }
 ];
 
+const sectionsObj = [
+  {
+    title: 'Section 1',
+    content: <p>Sometimes I'll start a sentence, and I don't even know where it's going.</p>
+  },
+  {
+    title: 'Section 2',
+    content: <p>I just hope I find it along the way.</p>
+  },
+  {
+    title: 'Section 3',
+    content: <p>Like an improv conversation.</p>
+  },
+]
+
 class App extends Component {
   render() {
     return (
@@ -27,9 +43,14 @@ class App extends Component {
         <Messages name="Notifications" unread={10}/>
       </div>
       <HelloWorld/>
+      <hr/>
       <Bomb/>
+      <hr/>
       <Gun/>
+      <hr/>
       <Tabs tabs={tabsProp}/>
+      <hr/>
+      <Accordion sections={sectionsObj}/>
       </div>
     );
   }
